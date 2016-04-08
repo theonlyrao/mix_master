@@ -3,3 +3,5 @@
 
 <p><%= link_to "Edit this Artist", edit_artist_path(@artist.id) %>
 <p><%= link_to "Delete", artist_path(@artist.id), method: :delete %>
+
+<p><%= link_to "New song", new_artist_song_path(@artist.id) %>
