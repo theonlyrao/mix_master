@@ -12,6 +12,5 @@ RSpec.feature "User edits an artist" do
 
     expect(page).to have_content new_name
     expect(page).to have_css("img[src=\"#{artist.image_path}\"]")
-    save_and_open_page
   end
 end

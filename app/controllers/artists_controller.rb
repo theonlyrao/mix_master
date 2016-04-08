@@ -1,6 +1,7 @@
 class ArtistsController < ApplicationController
 
   def index
+    @artists = Artist.all
   end
 
   def new
@@ -31,6 +32,11 @@ class ArtistsController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    Artist.destroy(params[:id])
+    redirect_to artists_path
   end
 
   private
