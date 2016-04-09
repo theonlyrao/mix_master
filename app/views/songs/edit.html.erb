@@ -1,0 +1,10 @@
+<%= @song.errors.full_messages.join(",") %>
+
+<h1>Edit Song <%= @song.title %></h1>
+
+<%= form_for @song do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.submit %>
+<% end %>

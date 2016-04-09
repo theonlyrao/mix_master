@@ -1,6 +1,14 @@
 <h1>Name: <%= @artist.name %></h1>
 <%= image_tag @artist.image_path %>
 
+
+<h2>Songs</h2>
+<ul>
+<%= @artist.songs.sort_by { |song| song.title }.map do |song| %>
+  <li><%= link_to "#{song.title}", song_path(song.id) %></li>
+<% end %>
+</ul>
+
 <p><%= link_to "Edit this Artist", edit_artist_path(@artist.id) %>
 <p><%= link_to "Delete", artist_path(@artist.id), method: :delete %>
 

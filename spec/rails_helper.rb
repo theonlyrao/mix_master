@@ -7,6 +7,7 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'pry-rails'
 require 'capybara/rails'
+require "factory_girl_rails"
 # Add additional requires below this line. Rails is not loaded until this point!
 
 Shoulda::Matchers.configure do |config|

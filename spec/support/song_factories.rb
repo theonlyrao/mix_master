@@ -1,6 +1,5 @@
 FactoryGirl.define do
   factory :song do
-    title "MyString"
-    artist nil
+    title        "orig title"
   end
 end
