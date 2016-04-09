@@ -4,7 +4,7 @@ RSpec.feature "User creates a playlist" do
   scenario "they see the page for the individual playlist" do
     song_one, song_two, song_three = create_list(:song, 3)
 
-    playlist_name = "playlist"
+    playlist_name = "asdf playlist"
 
     visit playlists_path
     click_on "New playlist"
@@ -20,7 +20,7 @@ RSpec.feature "User creates a playlist" do
       expect(page).to have_link song_one.title, href: song_path(song_one)
     end
 
-    withing("li:last") do
+    within("li:last") do
       expect(page).to have_link song_three.title, href: song_path(song_three)
     end
   end
