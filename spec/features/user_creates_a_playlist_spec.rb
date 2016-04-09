@@ -11,6 +11,7 @@ RSpec.feature "User creates a playlist" do
     fill_in "playlist_name", with: playlist_name
     check("song-#{song_one.id}")
     check("song-#{song_three.id}")
+
     click_on "Create Playlist"
 
     expect(page).to have_content playlist_name
