@@ -1,3 +1,5 @@
+<%= @song.errors.full_messages.join(",") %>
+
 <h1>Make New Song</h1>
 
 <%= form_for [@artist, @song] do |f| %>
