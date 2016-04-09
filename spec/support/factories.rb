@@ -16,4 +16,8 @@ FactoryGirl.define do
     title
     artist
   end
+
+  factory :playlist do
+    name
+  end
 end

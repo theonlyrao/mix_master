@@ -1,6 +1,7 @@
 class PlaylistsController < ApplicationController
 
   def index
+    @playlists = Playlist.all
   end
 
   def new
@@ -18,6 +19,19 @@ class PlaylistsController < ApplicationController
 
   def show
     @playlist = Playlist.find(params[:id])
+  end
+
+  def edit
+    @playlist = Playlist.find(params[:id])
+  end
+
+  def update
+    @playlist = Playlist.update(params[:id], playlist_params)
+    if @playlist.save
+      redirect_to playlist_path(@playlist.id)
+    else
+      render :edit
+    end
   end
 
   private
